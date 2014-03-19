@@ -31,15 +31,15 @@
   	// Calculate size of resizeable divs
     $(function() {
     	var codeHeight = $(".CodeMirror").height();
-    	$("#viewer").height(winHeight - codeHeight - 75);
+    	$("#viewer").height(winHeight - codeHeight - 55);
 
     	var viewHeight = $("#viewer").height();
-    	$(".CodeMirror").height(winHeight - viewHeight - 75 );
+    	$(".CodeMirror").height(winHeight - viewHeight - 55 );
     });
 
     $("#viewer").resize(function() {
     	var viewHeight = $("#viewer").height();
-    	$(".CodeMirror").height(winHeight - viewHeight - 75);
+    	$(".CodeMirror").height(winHeight - viewHeight - 55);
     });
 
     // Toggle Toolbox

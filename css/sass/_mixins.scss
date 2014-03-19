@@ -21,11 +21,3 @@
    justify-content: left;
 }
 
-@for $i from 1 through 2 {
-	.code:nth-child(2n+#{$i}) {
-		background: darken($green, $i * 12) !important;
-		&:hover {
-			background: #222 !important;
-		}
-	}
-}
