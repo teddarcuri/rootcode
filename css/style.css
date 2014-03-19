@@ -3,6 +3,19 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.code:nth-child(2n+1) {
+  background: #57734c !important; }
+  .code:nth-child(2n+1):hover {
+    background: #222 !important; }
+
+.code:nth-child(2n+2) {
+  background: #3b4e33 !important; }
+  .code:nth-child(2n+2):hover {
+    background: #222 !important; }
+
+#search-bar {
+  float: right; }
+
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
@@ -10,7 +23,8 @@
   /* Firefox, other Gecko */
   box-sizing: border-box;
   /* Opera/IE 8+ */
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -59,7 +73,7 @@ table {
   width: 120px;
   height: 100%;
   position: fixed;
-  background: url(../assets/logo-clear.png) center 95% no-repeat black;
+  background: url(../assets/logo-clear.png) center 97% no-repeat #0d0d0d;
   background-size: auto 200px;
   -webkit-transition: 0.15s ease all;
   -moz-transition: 0.15s ease all;
@@ -84,8 +98,8 @@ table {
       padding: 20px 0px;
       text-decoration: none; }
       #sidebar ul#nav li a:hover {
-        background: #111;
-        box-shadow: inset 0px 0px 5px 2px #000;
+        background: #222;
+        box-shadow: inset 0px 0px 10px 2px #000;
         color: #fff;
         text-shadow: 0px 0px 15px #aaa; }
 
@@ -96,16 +110,83 @@ table {
       margin-left: 0px; } }
   #main-container #toolbar {
     width: 100%;
-    height: 75px;
-    background-color: #303030;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #303030), color-stop(100%, #222222));
-    background-image: -webkit-linear-gradient(top, #303030, #222222);
-    background-image: linear-gradient(to bottom,#303030, #222222);
+    height: 55px;
+    background-color: #333333;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #111111));
+    background-image: -webkit-linear-gradient(top, #333333, #111111);
+    background-image: linear-gradient(to bottom,#333333, #111111);
     position: relative; }
     @media (max-width: 650px) {
       #main-container #toolbar {
         background: url(../assets/logo.png) 13px 13px no-repeat #111111;
         background-size: auto 60%; } }
+    #main-container #toolbar #dashboard {
+      height: 55px;
+      width: auto;
+      background-color: #333333;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #111111));
+      background-image: -webkit-linear-gradient(top, #333333, #111111);
+      background-image: linear-gradient(to bottom,#333333, #111111);
+      position: relative;
+      float: right;
+      margin-right: 20px;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      /* works with row or column */
+      flex-direction: row;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: left;
+      justify-content: left; }
+      #main-container #toolbar #dashboard .welcome {
+        color: #fff;
+        font-family: 'Museo Sans';
+        padding: 0px 20px; }
+        #main-container #toolbar #dashboard .welcome img {
+          height: 30px;
+          width: auto;
+          margin-right: 10px;
+          border-radius: 200%;
+          vertical-align: middle; }
+      #main-container #toolbar #dashboard .arrow {
+        height: 100%;
+        width: 55px;
+        display: block;
+        background: url(../assets/arrow-down.png) center center no-repeat;
+        background-size: 15px;
+        cursor: pointer;
+        box-shadow: inset 0px -10px 5px #111; }
+        #main-container #toolbar #dashboard .arrow:hover {
+          background: url(../assets/arrow-down.png) #222222 center center no-repeat;
+          background-size: 15px;
+          box-shadow: inset 0px 0px 10px #000; }
+    #main-container #toolbar #toolbox {
+      width: 300px;
+      height: auto;
+      background-color: #444444;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #444444), color-stop(100%, #333333));
+      background-image: -webkit-linear-gradient(top, #444444, #333333);
+      background-image: linear-gradient(to bottom,#444444, #333333);
+      position: fixed;
+      top: 55px;
+      right: 20px;
+      z-index: 999;
+      display: none;
+      border-radius: 0px 0px 10px 10px;
+      box-shadow: inset 0px 0px 30px #222; }
+      #main-container #toolbar #toolbox ul a {
+        display: block;
+        padding: 25px;
+        color: #fff;
+        font-size: 18px;
+        font-family: 'Museo Sans';
+        border-bottom: solid 2px #444;
+        border-radius: 0px; }
+        #main-container #toolbar #toolbox ul a:hover {
+          box-shadow: inset 0px 0px 5px #111; }
+        #main-container #toolbar #toolbox ul a:nth-last-of-type(1) {
+          border-radius: 0px 0px 10px 10px !important; }
     #main-container #toolbar .title {
       position: absolute;
       left: 20px;
@@ -116,65 +197,63 @@ table {
       @media (max-width: 650px) {
         #main-container #toolbar .title {
           display: none; } }
-    #main-container #toolbar form .search {
-      position: absolute;
-      right: 0px;
-      height: 75px;
-      width: 200px;
-      border: none;
-      outline: none;
-      background: rgba(0, 0, 0, 0.45);
-      color: #666;
-      font-size: 1.5em;
-      font-weight: 300;
-      padding: 0px 10px;
-      text-transform: uppercase;
-      -webkit-transition: 0.75s ease all;
-      -moz-transition: 0.75s ease all;
-      transition: 0.75s ease all; }
-      #main-container #toolbar form .search:focus {
-        color: #fff;
-        background: #111;
-        width: 350px;
-        padding-left: 25px;
+    #main-container #toolbar #search-bar {
+      float: left;
+      position: relative; }
+      #main-container #toolbar #search-bar .search {
+        position: relative;
+        height: 55px;
+        width: 200px;
+        border: none;
+        outline: none;
+        background: rgba(0, 0, 0, 0.25);
+        color: #666;
+        font-size: 1.5em;
+        font-weight: 300;
+        padding: 0px 10px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
         -webkit-transition: 0.75s ease all;
         -moz-transition: 0.75s ease all;
         transition: 0.75s ease all; }
-    #main-container #toolbar form .react-circle {
-      width: 30px;
-      height: 30px;
-      background: transparent;
-      border-radius: 200%;
-      border: solid 5px #666;
-      position: absolute;
-      right: 20px;
-      top: 23px;
-      -webkit-transition: 0.5s ease all;
-      -moz-transition: 0.5s ease all;
-      transition: 0.5s ease all; }
-      #main-container #toolbar form .react-circle:hover {
-        background: #aaa;
-        border: solid 6px #fff;
+        #main-container #toolbar #search-bar .search:focus {
+          color: #fff;
+          background-color: #444444;
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #444444), color-stop(100%, #333333));
+          background-image: -webkit-linear-gradient(top, #444444, #333333);
+          background-image: linear-gradient(to bottom,#444444, #333333);
+          width: 350px;
+          padding-left: 25px;
+          box-shadow: inset 0px 0px 5px #111;
+          -webkit-transition: 0.75s ease all;
+          -moz-transition: 0.75s ease all;
+          transition: 0.75s ease all; }
+      #main-container #toolbar #search-bar .react-circle {
+        width: 25px;
+        height: 25px;
+        background: transparent;
+        border-radius: 200%;
+        border: solid 5px #666;
+        margin: 0px 10px;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        -webkit-transition: 0.5s ease all;
+        -moz-transition: 0.5s ease all;
+        transition: 0.5s ease all; }
+      #main-container #toolbar #search-bar .react {
+        border: solid 15px #739864;
         -webkit-transition: 0.75s ease all;
         -moz-transition: 0.75s ease all;
         transition: 0.75s ease all;
-        -webkit-transform: scale(0.35);
-        -moz-transform: scale(0.35);
-        -ms-transform: scale(0.35);
-        -o-transform: scale(0.35);
-        transform: scale(0.35); }
-    #main-container #toolbar form .react {
-      border: solid 15px #739864;
-      -webkit-transition: 0.75s ease all;
-      -moz-transition: 0.75s ease all;
-      transition: 0.75s ease all;
-      -webkit-transform: scale(0.4);
-      -moz-transform: scale(0.4);
-      -ms-transform: scale(0.4);
-      -o-transform: scale(0.4);
-      transform: scale(0.4); }
+        -webkit-transform: scale(0.3);
+        -moz-transform: scale(0.3);
+        -ms-transform: scale(0.3);
+        -o-transform: scale(0.3);
+        transform: scale(0.3); }
   #main-container #viewer {
     max-width: 100%;
+    height: auto;
     background: #ccc;
     position: relative;
     overflow: auto; }
@@ -189,13 +268,25 @@ table {
         display: table; }
       #main-container #viewer .wrapper:after {
         clear: both; }
+      #main-container #viewer .wrapper h2 {
+        color: #888;
+        font-size: 36px;
+        padding: 15px 0px;
+        font-family: 'Museo Sans';
+        font-weight: 700; }
+      #main-container #viewer .wrapper hr {
+        border: 0;
+        height: 0;
+        margin: 0px;
+        border-top: 1px solid rgba(0, 0, 0, 0.25);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35); }
     #main-container #viewer .code {
       display: block;
       float: left;
       margin-right: 0.88763%;
       width: 15.92697%;
-      padding: 30px;
-      background: #222;
+      padding: 25px;
+      background: #111;
       box-shadow: 2px 2px 0px 1px #666;
       margin-top: 1em;
       color: #fff;
@@ -250,24 +341,16 @@ table {
             clear: left; } }
     #main-container #viewer .ui-icon {
       background: url(../assets/handle.jpg) black no-repeat center center;
-      background-size: 90px 10px;
-      height: 25px;
-      width: 100px;
-      right: 150px;
-      bottom: -5px;
-      border-radius: 5px 5px 0px 0px;
+      background-size: 200px 6px;
+      height: 20px;
+      width: 100%;
+      bottom: 0px !important;
+      box-shadow: 0px 0px 5px 0px #000;
       position: absolute !important;
       cursor: row-resize;
       -webkit-transition: 0.15s ease all;
       -moz-transition: 0.15s ease all;
       transition: 0.15s ease all; }
-      #main-container #viewer .ui-icon:hover {
-        -webkit-transition: 0.15s ease all;
-        -moz-transition: 0.15s ease all;
-        transition: 0.15s ease all;
-        height: 40px;
-        background: url(../assets/handle.jpg) black repeat-y center center;
-        background-size: 90px 10px; }
       @media (max-width: 650px) {
         #main-container #viewer .ui-icon {
           display: none; } }
@@ -329,6 +412,7 @@ table {
   font-family: 'Ubuntu';
   font-size: 14px;
   width: 100%;
+  min-height: 75% important;
   display: inline-block; }
   @media (max-width: 650px) {
     .CodeMirror {

@@ -52,7 +52,7 @@ table {
   /* Set height, width, borders, and global font properties here */
   font-family: 'Ubuntu';
   font-size: 14px;
-  width: 100%;
+  width: 100%; min-height: 75% important;
   display: inline-block;
   @include breakpoint(baby-bear){
     font-size: 11px !important;

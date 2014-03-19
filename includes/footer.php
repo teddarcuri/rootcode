@@ -6,10 +6,10 @@
 
 	// Code mirror Instantiation
 	var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-	  mode: "php",
-	  theme: "solarized light",
+	   mode: "php",
+       theme: "solarized light",
 	   lineNumbers: true,
-	   tabSize: 10,
+	   tabSize: 5,
 	});
 
      // Search bar Hover i/o
@@ -41,6 +41,17 @@
     	var viewHeight = $("#viewer").height();
     	$(".CodeMirror").height(winHeight - viewHeight - 75);
     });
+
+    // Toggle Toolbox
+
+    $(".arrow").mouseenter(function(){
+        $("#toolbox").slideDown(500);
+    });
+
+    $("#toolbox").mouseleave(function(){
+        $(this).slideUp(500);
+    });
+
 </script>
 
 </body>

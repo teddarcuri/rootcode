@@ -9,3 +9,23 @@
     @media (max-width: 650px)  { @content; }
   }
 }
+
+@mixin flexbox() {
+  display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row; /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: left;
+   justify-content: left;
+}
+
+@for $i from 1 through 2 {
+	.code:nth-child(2n+#{$i}) {
+		background: darken($green, $i * 12) !important;
+		&:hover {
+			background: #222 !important;
+		}
+	}
+}
