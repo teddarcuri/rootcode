@@ -1,7 +1,9 @@
-@import "settings";
-
 @import "bourbon";
 @import "neat";
+
+@import "settings";
+
+
 
 @import "mixins";
 @import "forms";
@@ -98,6 +100,12 @@ html {
 				}
 			}
 
+			.welcome-flash {
+				@include transition(all ease 0.75s);
+				@include linear-gradient(top, $green, #000); 
+				background: $green;
+			}
+
 			.arrow {
 				height: 100%; width: 55px;
 				display: block; 
@@ -113,28 +121,46 @@ html {
 			}
 		}
 
+		// Logged In Dropdown Toolbox
 		#toolbox {
 			width: 290px; height: auto;
-			@include linear-gradient(top, #222, #111);
+			@include linear-gradient(top, #222, #171717);
 			position: fixed; top: 55px; right: 20px;
 			z-index: 999;
 			display: none;
 			border-radius: 0px 0px 10px 10px;
 			box-shadow: inset 0px 0px 30px #222, 0px 0px 15px #222;
 
+			// Tools
 			ul {
 				padding-bottom: 25px;
 				a {
 					display: block;
-					padding: 25px;
+					padding: 20px;
 					color: #fff;
 					font-size: 18px; font-family: 'Museo Sans';
 					border-bottom: solid 2px #333;
 					border-radius: 0px;
+					@include transition(0.35s ease all);
 					&:hover {
 						box-shadow: inset 0px 0px 5px #111;
 						background: #303030;
-						border-bottom: solid 2px $green;
+						border-left: solid 5px $green;
+						@include transition(0.15s ease all);
+					}
+
+					// Viewer Background Options
+					&.theme {
+						padding: 12px 20px; font-size: 16px;
+					}
+
+					&#jungle-toggle {
+						background: url(../assets/jungle-thumb.jpg);
+					}
+
+					&#sleek-toggle {
+						background: none;
+						@include linear-gradient(top, #111, #000);
 					}
 				}
 			}
@@ -197,7 +223,7 @@ html {
 		width: 100%; height: auto;
 		padding: 0px;
 		@include linear-gradient(bottom, #000, #252525);
-		/* background: url(../assets/forest-bg.jpg) no-repeat center center fixed; 
+		/*x` background: url(../assets/forest-bg.jpg) no-repeat center center fixed; 
  	 	-webkit-background-size: cover;
   		-moz-background-size: cover;
   		-o-background-size: cover;

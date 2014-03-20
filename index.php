@@ -10,8 +10,8 @@
 			<div id="toolbox">
 				<ul class="tools">
 					<a href="#"><li>Add some code.</li></a>
-					<a href="#"><li>Edit some code.</li></a>
-					<a href="#"><li>Delete some code.</li></a>
+					<a href="" class="theme" id="jungle-toggle"><li>Jungle Theme</li></a>
+					<a href="" class="theme" id="sleek-toggle"><li>Sleek Theme</li></a>
 				</ul>
 			</div>
 			
@@ -35,7 +35,7 @@
 
 				<?php
 					for ($i ; $i < 9 ; $i++) {
-						echo "<a class='code'>Login Class {$i}</a>\n";
+						echo "<a class='code'>Login Class {$i} and stuff or whatever</a>\n";
 					}
 				?>
 			</div>

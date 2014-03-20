@@ -1,25 +1,15 @@
-.med-logo {
-  width: 80px;
-  height: auto;
-  padding: 15px; }
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.med-logo {
+  width: 80px;
+  height: auto;
+  padding: 15px; }
+
 #search-bar {
   float: right; }
-
-* {
-  -webkit-box-sizing: border-box;
-  /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;
-  /* Firefox, other Gecko */
-  box-sizing: border-box;
-  /* Opera/IE 8+ */
-  font-family: 'Open Sans', sans-serif;
-  text-decoration: none; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -63,6 +53,15 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  text-decoration: none; }
 
 #login-form {
   width: 300px;
@@ -211,6 +210,15 @@ html {
           margin-right: 10px;
           border-radius: 200%;
           vertical-align: middle; }
+      #main-container #toolbar #dashboard .welcome-flash {
+        -webkit-transition: all ease 0.75s;
+        -moz-transition: all ease 0.75s;
+        transition: all ease 0.75s;
+        background-color: #739864;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #739864), color-stop(100%, black));
+        background-image: -webkit-linear-gradient(top, #739864, black);
+        background-image: linear-gradient(to bottom,#739864, black);
+        background: #739864; }
       #main-container #toolbar #dashboard .arrow {
         height: 100%;
         width: 55px;
@@ -227,9 +235,9 @@ html {
       width: 290px;
       height: auto;
       background-color: #222222;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #222222), color-stop(100%, #111111));
-      background-image: -webkit-linear-gradient(top, #222222, #111111);
-      background-image: linear-gradient(to bottom,#222222, #111111);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #222222), color-stop(100%, #171717));
+      background-image: -webkit-linear-gradient(top, #222222, #171717);
+      background-image: linear-gradient(to bottom,#222222, #171717);
       position: fixed;
       top: 55px;
       right: 20px;
@@ -241,16 +249,33 @@ html {
         padding-bottom: 25px; }
         #main-container #toolbar #toolbox ul a {
           display: block;
-          padding: 25px;
+          padding: 20px;
           color: #fff;
           font-size: 18px;
           font-family: 'Museo Sans';
           border-bottom: solid 2px #333;
-          border-radius: 0px; }
+          border-radius: 0px;
+          -webkit-transition: 0.35s ease all;
+          -moz-transition: 0.35s ease all;
+          transition: 0.35s ease all; }
           #main-container #toolbar #toolbox ul a:hover {
             box-shadow: inset 0px 0px 5px #111;
             background: #303030;
-            border-bottom: solid 2px #739864; }
+            border-left: solid 5px #739864;
+            -webkit-transition: 0.15s ease all;
+            -moz-transition: 0.15s ease all;
+            transition: 0.15s ease all; }
+          #main-container #toolbar #toolbox ul a.theme {
+            padding: 12px 20px;
+            font-size: 16px; }
+          #main-container #toolbar #toolbox ul a#jungle-toggle {
+            background: url(../assets/jungle-thumb.jpg); }
+          #main-container #toolbar #toolbox ul a#sleek-toggle {
+            background: none;
+            background-color: #111111;
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #111111), color-stop(100%, black));
+            background-image: -webkit-linear-gradient(top, #111111, black);
+            background-image: linear-gradient(to bottom,#111111, black); }
     #main-container #toolbar .title {
       position: absolute;
       left: 20px;
@@ -320,7 +345,7 @@ html {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #252525));
     background-image: -webkit-linear-gradient(bottom, black, #252525);
     background-image: linear-gradient(to top,black, #252525);
-    		/* background: url(../assets/forest-bg.jpg) no-repeat center center fixed; 
+    		/*x` background: url(../assets/forest-bg.jpg) no-repeat center center fixed; 
      	 	-webkit-background-size: cover;
       		-moz-background-size: cover;
       		-o-background-size: cover;
@@ -354,8 +379,8 @@ html {
     #main-container #viewer .code {
       display: block;
       float: left;
-      margin-right: 0.88763%;
-      width: 15.92697%;
+      margin-right: 2.35765%;
+      width: 14.70196%;
       padding: 30px;
       background: #5c7950;
       border-radius: 10px;
@@ -378,8 +403,8 @@ html {
         #main-container #viewer .code {
           display: block;
           float: left;
-          margin-right: 0.88763%;
-          width: 32.74158%; }
+          margin-right: 2.35765%;
+          width: 31.76157%; }
           #main-container #viewer .code:last-child {
             margin-right: 0; }
           #main-container #viewer .code:nth-child(3n) {
@@ -390,8 +415,8 @@ html {
         #main-container #viewer .code {
           display: block;
           float: left;
-          margin-right: 0.88763%;
-          width: 49.55618%; }
+          margin-right: 2.35765%;
+          width: 48.82117%; }
           #main-container #viewer .code:last-child {
             margin-right: 0; }
           #main-container #viewer .code:nth-child(2n) {
@@ -402,7 +427,7 @@ html {
         #main-container #viewer .code {
           display: block;
           float: left;
-          margin-right: 0.88763%;
+          margin-right: 2.35765%;
           width: 100%; }
           #main-container #viewer .code:last-child {
             margin-right: 0; }

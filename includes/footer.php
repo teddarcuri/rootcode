@@ -43,7 +43,6 @@
     });
 
     // Toggle Toolbox
-
     $(".arrow").mouseenter(function(){
         $("#toolbox").slideDown(500);
     });
@@ -51,6 +50,12 @@
     $("#toolbox").mouseleave(function(){
         $(this).slideUp(500);
     });
+
+    // Notifications
+    $(function(){
+        $(".welcome-msg").delay(4000).slideUp();
+    });
+
 
 </script>
 
