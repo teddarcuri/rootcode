@@ -3,13 +3,35 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.button {
+  padding: 15px 25px;
+  background: #739864;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #000;
+  font-family: 'Museo Sans';
+  display: inline-block; }
+  .button:hover {
+    background: #81a373;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 0px #aac1a1; }
+
+.register {
+  font-family: 'Museo Sans';
+  color: #555;
+  letter-spacing: 2px;
+  font-size: 12px;
+  padding: 10px;
+  display: block; }
+  .register:hover {
+    color: #739864; }
+
 .med-logo {
   width: 80px;
   height: auto;
   padding: 15px; }
-
-#search-bar {
-  float: right; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -112,6 +134,67 @@ table {
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s; }
     #login-form input[type="submit"]:hover {
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+      transition: all ease 0.5s;
+      background: #81a373;
+      cursor: pointer;
+      box-shadow: 0px 0px 20px 0px #aac1a1; }
+
+#register-form {
+  width: 500px;
+  height: auto;
+  top: 12%;
+  left: 50%;
+  margin-left: -250px;
+  background-color: #222222;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #222222), color-stop(100%, #151515));
+  background-image: -webkit-linear-gradient(top, #222222, #151515);
+  background-image: linear-gradient(to bottom,#222222, #151515);
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 15px rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  position: absolute; }
+  #register-form h2 {
+    color: #777;
+    font-family: 'Museo Sans';
+    font-size: 22px;
+    letter-spacing: 5px;
+    padding: 20px; }
+  #register-form input {
+    margin: 10px 0px; }
+  #register-form label {
+    font-family: 'Museo Sans';
+    color: #555;
+    letter-spacing: 2px;
+    font-size: 12px; }
+  #register-form hr {
+    border: none;
+    border-top: solid 1px #000;
+    border-bottom: solid 1px #444;
+    width: 80%; }
+  #register-form input[type="text"], #register-form input[type="password"], #register-form input[type="email"] {
+    height: 50px;
+    width: 80%;
+    background: #000;
+    outline: none;
+    border: none;
+    color: #666;
+    padding: 0px 10px;
+    font-size: 26px; }
+    #register-form input[type="text"]:focus, #register-form input[type="password"]:focus, #register-form input[type="email"]:focus {
+      color: #fff; }
+  #register-form input[type="submit"] {
+    padding: 15px 25px;
+    background: #739864;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s; }
+    #register-form input[type="submit"]:hover {
       -webkit-transition: all ease 0.5s;
       -moz-transition: all ease 0.5s;
       transition: all ease 0.5s;
@@ -266,10 +349,12 @@ html {
             -moz-transition: 0.15s ease all;
             transition: 0.15s ease all; }
           #main-container #toolbar #toolbox ul a.theme {
+            cursor: pointer;
             padding: 12px 20px;
             font-size: 16px; }
           #main-container #toolbar #toolbox ul a#jungle-toggle {
-            background: url(../assets/jungle-thumb.jpg); }
+            background: url(../assets/jungle-thumb.jpg) center center;
+            background-size: cover; }
           #main-container #toolbar #toolbox ul a#sleek-toggle {
             background: none;
             background-color: #111111;
@@ -345,6 +430,7 @@ html {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #252525));
     background-image: -webkit-linear-gradient(bottom, black, #252525);
     background-image: linear-gradient(to top,black, #252525);
+    background-size: cover;
     		/*x` background: url(../assets/forest-bg.jpg) no-repeat center center fixed; 
      	 	-webkit-background-size: cover;
       		-moz-background-size: cover;
@@ -384,7 +470,7 @@ html {
       padding: 30px;
       background: #5c7950;
       border-radius: 10px;
-      margin-top: 1em;
+      margin-top: 1.5em;
       color: #fff;
       font-size: 18px;
       font-family: 'Museo Sans';

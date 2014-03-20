@@ -2,11 +2,7 @@
 @import "neat";
 
 @import "settings";
-
-
-
 @import "mixins";
-@import "forms";
 
 //Browser default style reset
 @import "reset";
@@ -151,11 +147,13 @@ html {
 
 					// Viewer Background Options
 					&.theme {
+						cursor: pointer;
 						padding: 12px 20px; font-size: 16px;
 					}
 
 					&#jungle-toggle {
-						background: url(../assets/jungle-thumb.jpg);
+						background: url(../assets/jungle-thumb.jpg) center center;
+						background-size: cover;
 					}
 
 					&#sleek-toggle {
@@ -223,6 +221,7 @@ html {
 		width: 100%; height: auto;
 		padding: 0px;
 		@include linear-gradient(bottom, #000, #252525);
+		background-size: cover;
 		/*x` background: url(../assets/forest-bg.jpg) no-repeat center center fixed; 
  	 	-webkit-background-size: cover;
   		-moz-background-size: cover;
@@ -259,7 +258,7 @@ html {
 			padding: 30px;
 			background:  darken($green, 10%);
 			border-radius: 10px;
-			margin-top: 1em;
+			margin-top: 1.5em;
 			color: #fff; font-size: 18px; font-family: 'Museo Sans';
 			text-align: center;
 			cursor: pointer;

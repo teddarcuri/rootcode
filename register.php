@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 include "includes/config.php";
 include "includes/header.php"; // HTML Header
 
@@ -14,22 +13,14 @@ if (version_compare(PHP_VERSION, '5.3.7', '<')) {
 // include the configs / constants for the database connection
 require_once("includes/db.php");
 
-// load the login class
-require_once("includes/login.php");
+// load the registration class
+require_once("includes/registration.php");
 
-// create a login object. when this object is created, it will do all login/logout stuff automatically
-$login = new Login();
+// create the registration object. when this object is created, it will do all registration stuff automatically
+$registration = new Registration();
 
-// if we are logged in here:
-if ($login->isUserLoggedIn() == true) {
-    include("views/logged_in.php");
-} else {
-// Not logged in
-    include("views/not_logged_in.php");
-}
+// show the register view (with the registration form, and messages/errors)
+include("views/register.php");
 
-include "includes/footer.php"; // HTML Footer
-
-?>
-
-
+// HTML Footer
+include "includes/footer.php"; 

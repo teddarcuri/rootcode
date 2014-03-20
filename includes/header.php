@@ -22,12 +22,12 @@
 
 	<!-- Code Mirror Languages -->
 	<!-- TODO: Concatenate -->
-	<script src="<?php echo BASE_URL ?>/mode/php/php.js"></script>
-	<script src="<?php echo BASE_URL ?>/mode/htmlmixed/htmlmixed.js"></script>
-	<script src="<?php echo BASE_URL ?>/mode/xml/xml.js"></script>
-	<script src="<?php echo BASE_URL ?>/mode/javascript/javascript.js"></script>
-	<script src="<?php echo BASE_URL ?>/mode/css/css.js"></script>
-	<script src="<?php echo BASE_URL ?>/mode/clike/clike.js"></script>
+	<script src="<?php echo BASE_URL ?>mode/php/php.js"></script>
+	<script src="<?php echo BASE_URL ?>mode/htmlmixed/htmlmixed.js"></script>
+	<script src="<?php echo BASE_URL ?>mode/xml/xml.js"></script>
+	<script src="<?php echo BASE_URL ?>mode/javascript/javascript.js"></script>
+	<script src="<?php echo BASE_URL ?>mode/css/css.js"></script>
+	<script src="<?php echo BASE_URL ?>mode/clike/clike.js"></script>
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">

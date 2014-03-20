@@ -1,17 +1,30 @@
 <?php 
+// checking for minimum PHP version
+if (version_compare(PHP_VERSION, '5.3.7', '<')) {
+    exit("Sorry, Simple PHP Login does not run on a PHP version smaller than 5.3.7 !");
+} else if (version_compare(PHP_VERSION, '5.5.0', '<')) {
+    // (this library adds the PHP 5.5 password hashing functions to older versions of PHP)
+    require_once("includes/password_compatibility_library.php");
+}
 
-	if( isset($_POST['login-submit']) ) {
+// include the configs / constants for the database connection
+require_once("includes/db.php");
 
-		echo $_POST['username'];
-		echo $_POST['password'];
+// load the login class
+require_once("includes/login.php");
 
-		header("Location: /index.php");
-	}
+// create a login object. when this object is created, it will do all login/logout stuff automatically
+$login = new Login();
 
-	include "includes/header.php"; // HTML Header
+// if we are already logged in here:
+if ($login->isUserLoggedIn() == true) {
+    header("Location: index.php");
+} 
+
+include "includes/config.php";
+include "includes/header.php"; // HTML Header
+
 ?>
-
-
 
 <form id="login-form" action="" method="post">
 	<center>	
